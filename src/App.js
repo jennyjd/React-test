@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import Header from './Header/Header.js'
+import Header from './components/Header/Header.jsx'
+import HomePage from './components/HomePage/HomePage.jsx';
 
 class App extends Component {
   render() {
-    return <Header/>
+    return (
+      <div>
+        <Header/>
+        <HomePage/>
+      </div>
+    );
   }
 }
 
