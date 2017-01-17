@@ -13,6 +13,7 @@ class HomePage extends Component{
 
   render(){
     return (
+
       <div className="main">
         <h1>Welcome {this.state.username}!</h1>
         <input type="text" onChange={this.update.bind(this)} placeholder="Enter your name"/>
