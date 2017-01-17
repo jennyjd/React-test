@@ -6,14 +6,14 @@ import './index.css';
 
 import App from './App';
 import HomePage from './components/HomePage/HomePage.jsx';
-import Registration from './components/Registration/Registration.jsx';
+import RegistrationForm from './components/RegistrationForm/RegistrationForm.jsx';
 import NotFound from './components/NotFound/NotFound.jsx';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={HomePage} />
-      <Route path='registration' component={Registration} />
+      <Route path='registration' component={RegistrationForm} />
     </Route>
     <Route path='*' component={NotFound} />
   </Router>,
