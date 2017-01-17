@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Registration from './components/Registration/Registration.jsx';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
+import './index.css';
+
 import App from './App';
 import HomePage from './components/HomePage/HomePage.jsx';
-import './index.css';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import Registration from './components/Registration/Registration.jsx';
+import NotFound from './components/NotFound/NotFound.jsx';
 
 ReactDOM.render(
   <Router history={browserHistory}>
@@ -12,6 +15,7 @@ ReactDOM.render(
       <IndexRoute component={HomePage} />
       <Route path='registration' component={Registration} />
     </Route>
+    <Route path='*' component={NotFound} />
   </Router>,
   document.getElementById('root')
 );
